@@ -1,3 +1,11 @@
-console.log(xyz, abc);
-var xyz = 100;
-let abc = 200;
+
+const obj = {
+    a: 10,
+    b: 20,
+    sum() {
+        return this.a + this.b;
+    }
+}
+
+const res = obj.sum.bind(obj);
+console.log(res());
